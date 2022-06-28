@@ -1,0 +1,27 @@
+<header>
+    <app-menu></app-menu>
+</header>
+<section id="banner">
+    <table class="table table-border table-sm">
+        <caption>List of users</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let habitacion of habitaciones">
+            <th scope="row">1</th>
+            <td>{{habitacion.nombre}}</td>
+            <td>{{habitacion.descripcion}}</td>
+            <td>{{habitacion.precio}}</td>
+          </tr>
+        </tbody>
+      </table>
+</section>
+<footer>
+    <app-footer></app-footer>
+</footer>
