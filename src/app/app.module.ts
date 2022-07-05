@@ -11,6 +11,8 @@ import { ReservasComponent } from './reservas/reservas.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { HabitacionesComponent } from './habitaciones/habitaciones.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormularioReservasComponent,
     ReservasComponent,
     InformacionComponent,
-    HabitacionesComponent
+    HabitacionesComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
