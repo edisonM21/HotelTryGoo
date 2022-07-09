@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { HabitacionesComponent } from './habitaciones/habitaciones.component';
-import { ReservasComponent } from './reservas/reservas.component';
+import { HabitacionesService } from './habitaciones/habitaciones.service';
 import {LoginComponent} from './login/login.component'
 import {RegisterComponent} from './register/register.component'
+import { HabitacionesComponent } from './habitaciones/habitaciones.component';
 
 const routes: Routes = [
   {
     path:'',
+    component:LoginComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'Home',
     component:HomeComponent,
     pathMatch:'full'
   },
@@ -17,8 +22,8 @@ const routes: Routes = [
     component:HabitacionesComponent
   },
   {
-    path:'Login',
-    component:LoginComponent,
+    path:'Home',
+    component:HomeComponent,
     pathMatch:'full'
   }, 
   {

@@ -12,4 +12,6 @@ export class InformacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ampliarInfo(){}
 }
+

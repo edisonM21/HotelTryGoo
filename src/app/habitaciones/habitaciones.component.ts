@@ -7,20 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabitacionesComponent implements OnInit {
 
-  titulo:String="Edison"
-  habitaciones:any[]=[
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ]
-
   constructor() { }
 
   ngOnInit(): void {

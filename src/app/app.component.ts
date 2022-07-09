@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
-import { ReservaService } from './services/reserva.service';
-
+import { HabitacionesService } from './habitaciones/habitaciones.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'HotelTryGo';
-  constructor(
-    private reservaService:ReservaService
-  ){
-    this.reservaService.getReservas().subscribe(resp=>{
-      console.log(resp)
-    })
+
+  habitaciones:any;
+
+  constructor(public habitacion:HabitacionesService){}
+
+  ngOnInit(){
+    this.habitacion.getHabitaciones().subscribe
+    (
+      (resp) => {this.habitaciones = resp; console.log(resp)},
+      (error) => {console.error(error)}
+    )
   }
 }
+
