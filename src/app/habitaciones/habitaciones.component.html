@@ -1,6 +1,14 @@
 <header>
-    <app-menu></app-menu>
+    
 </header>
+
+<div class="col" *ngFor="let habitacion of listahabitaciones">
+  <div class="card h-100">
+    <h4 class="text-center text-muted my-3">{{habitacion.nombre}}</h4>
+    <img src="{{habitacion.foto}}" alt="" class="img-fluid w-100 h-100">
+</div>
+</div>
+
 <section id="banner">
     <table class="table table-border table-sm">
         <caption>List of users</caption>
@@ -13,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr >
             <th scope="row">1</th>
             <td></td>
             <td></td>

@@ -7,12 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FormularioReservasComponent } from './formulario-reservas/formulario-reservas.component';
-import { ReservasComponent } from './reservas/reservas.component';
+//import { ReservasComponent } from './reservas/reservas.component';
 import { InformacionComponent } from './informacion/informacion.component';
-import { HabitacionesService } from './habitaciones/habitaciones.service';
+// import { HabitacionesService } from './habitaciones/habitaciones.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HabitacionesComponent } from './habitaciones/habitaciones.component';
+import { ServicioPruebaService } from './servicio-prueba.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,6 @@ import { HabitacionesComponent } from './habitaciones/habitaciones.component';
     MenuComponent,
     FooterComponent,
     FormularioReservasComponent,
-    ReservasComponent,
     InformacionComponent,
     HabitacionesComponent,
     LoginComponent,
@@ -32,9 +32,7 @@ import { HabitacionesComponent } from './habitaciones/habitaciones.component';
     HttpClientModule
 
   ],
-  providers: [
-    HabitacionesService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
