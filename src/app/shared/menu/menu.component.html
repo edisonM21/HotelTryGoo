@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark menu fixed-top " id="menu">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/">TryGo</a>
+      <a class="navbar-brand" routerLink="/Home">TryGo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,14 +26,18 @@
             <i class="fa-solid fa-magnifying-glass text-black"></i>
           </a>
         </div>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-          <li class="nav-item" id="singIn">
-            <a class="nav-link active" aria-current="page" routerLink="/" >Sing in</a>
-          </li>
-          <li class="nav-item" id="singUp">
-            <a class="nav-link active" aria-current="page" routerLink="/Register" >Sing up</a>
-          </li>
-        </ul> 
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown" id="singUp">
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="singUpo" >
+                <li><a class="dropdown-item"  href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#" routerLink="/Register">Registro</a></li>
+                <li><a class="dropdown-item" href="#" routerLink="/Login">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+        </ul>
       </div>
     </div>
   </nav>

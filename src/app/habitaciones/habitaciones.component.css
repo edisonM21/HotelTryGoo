@@ -2,7 +2,7 @@
     background-image: url('../../assets/img/TryGo2.jfif');
     background-size: cover;
     background-position: top center;
-    padding: 20% 2% 40% 2%;
+    padding: 10% 2% 20% 2%;
     position: relative;
     z-index: 1;
 }
@@ -16,4 +16,5 @@
     left: 0px;
     opacity: 0.3;
     z-index: -1;
+    
 }

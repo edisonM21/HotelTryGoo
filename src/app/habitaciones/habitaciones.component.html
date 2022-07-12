@@ -1,35 +1,45 @@
 <header>
-    
+  <app-menu></app-menu>
 </header>
-
-<div class="col" *ngFor="let habitacion of listahabitaciones">
-  <div class="card h-100">
-    <h4 class="text-center text-muted my-3">{{habitacion.nombre}}</h4>
-    <img src="{{habitacion.foto}}" alt="" class="img-fluid w-100 h-100">
-</div>
-</div>
-
 <section id="banner">
-    <table class="table table-border table-sm">
-        <caption>List of users</caption>
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr >
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let habitacion of listahabitaciones">
+      <div class="card">
+        <div class="image">
+          <h2 class="text-center">{{habitacion.nombre}}</h2>
+          <h5 class="text-center">${{habitacion.precio}}</h5>
+          <h5 class="text-center">Descripcion:{{habitacion.descripcion}}</h5>
+          <img src="../../assets/img/habit1.jpg" alt="" class="card-img-top">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Reservar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          Hoteles TryGo
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+          <i class="fa-solid fa-star text-warning"></i>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        RESERVA EXITOSA
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">TryGo</button>
+      </div>
+    </div>
+  </div>
+</div>
 <footer>
     <app-footer></app-footer>
 </footer>

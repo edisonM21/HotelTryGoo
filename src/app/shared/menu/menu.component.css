@@ -10,15 +10,15 @@
     position: fixed;
     right: 500px;
 }
-#singIn{
-    position: fixed;
-    right: 100px;
-    top: 1.5%;
-}
 #singUp{
     position: fixed;
-    right: 20px;
+    right: 10px;
     top: 1.5%;
+}
+#singUpo{
+    position: fixed;
+    left: 1100px;
+    top: 7%;
 }
 .buscar{
     display: flex;

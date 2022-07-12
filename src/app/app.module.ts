@@ -13,7 +13,8 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HabitacionesComponent } from './habitaciones/habitaciones.component';
-import { ServicioPruebaService } from './servicio-prueba.service';
+// import { ServicioPruebaService } from './servicio-prueba.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { ServicioPruebaService } from './servicio-prueba.service';
     InformacionComponent,
     HabitacionesComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    
   ],
   imports: [
     BrowserModule,
