@@ -115,3 +115,8 @@ input[type="submit"]:hover{
 .registrarse a:hover{
     text-decoration: underline ;
 }
+h1{
+    color: #560875;
+    font-weight: 400;
+    margin-bottom: 15px;
+}

@@ -2,26 +2,13 @@
   <app-menu></app-menu>
 </header>
 <section id="banner">
-  <!-- <div class="container1">
-    <div class="card1" *ngFor="let habitacion of listahabitaciones">
-      <figure>
-        <img src="../../assets/img/habit1.jpg" alt="">
-      </figure>
-      <div class="contenido">
-        <h3>{{habitacion.nombre}}</h3>
-        <p>{{habitacion.descripcion}}</p>
-        <a href="#">Leer mas</a>
-      </div>
-    </div>
-  </div> -->
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let habitacion of listahabitaciones">
       <div class="card">
         <div class="image">
           <div class="contenido">
-          <!-- <h5>{{habitacion.foto}}</h5> -->
           <h2 class="text-center">{{habitacion.nombre}}</h2>
-          <img src="../../assets/img/habit1.jpg" alt="" class="card-img-top">
+          <img src="{{habitacion.foto}}" alt="" class="card-img-top">
           <h5 class="text-center">${{habitacion.precio}}</h5>
           <h5 class="text-center">{{habitacion.descripcion}}</h5>
           <button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -34,10 +21,10 @@
   </div>
 </section>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog" id="modal">
     <div class="modal-content">
       <div class="modal-header" style="text-align: center;">
-          Hoteles TryGo
+          <b>Hotel TryGo</b>
           <i class="fa-solid fa-star text-warning"></i>
           <i class="fa-solid fa-star text-warning"></i>
           <i class="fa-solid fa-star text-warning"></i>
@@ -45,12 +32,14 @@
           <i class="fa-solid fa-star text-warning"></i>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        RESERVA EXITOSA
+      <div class="modal-body text-center">
+        <b>RESERVA EXITOSA</b>
+        <br>
+        <b>Para nosotros sera un placer atenderte de la mejor manera y con la mayor calidad posible</b>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-secondary" style="background-color: #ad0cec;">TryGo</button>
+        <button type="button" class="btn btn-secondary" style="background-color: #ad0cec;" routerLink="/Home">TryGo</button>
       </div>
     </div>
   </div>

@@ -13,6 +13,6 @@ export class ServicioPruebaService {
    }
 
    getHabitaciones():Observable<any>{
-    return this.peticion.get('https://apiglobant1.herokuapp.com/api/v1/habitaciones/');
+    return this.peticion.get('https://hoteles-trygo.herokuapp.com/api/v1/habitaciones/');
   }
 }
