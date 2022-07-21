@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { ServicesAuthService } from 'src/app/services-auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,26 +7,25 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  userLogged=this.authService.getUserlogged();
+  constructor(private authService: ServicesAuthService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  usuario = {
+    nombre:'',
+    password:''
   }
 
-  @HostListener('window:scroll',['$event'])onScrollEvent($event:any){
-    if($event.srcElement.scrollingElement.scrollTop==0){
-    let menu:any=document.getElementById("menu")
-    menu.classList.add("menu")
-    menu.classList.remove("menu2")
-
-    }else{
-
-      let menu:any=document.getElementById("menu")
-      menu.classList.add("menu2")
-      menu.classList.remove("menu")
- 
-
-    }
+  logout(){
+    this.authService.logout();
   }
+  ingresarConGoogle(){
+    console.log(this.usuario)
+    const {nombre, password}= this.usuario;
+    this.authService.loginGoogle(nombre,password).then(res=>{
+      console.log("se registro", res);
+    })
+  }
+
+  ngOnInit(): void {}
 
 }

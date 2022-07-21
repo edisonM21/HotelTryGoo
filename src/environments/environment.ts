@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyAC6o4q_Xuo9Luv98t7B98xRUOFb5IHeNc",
+    authDomain: "loginhotel-dfe70.firebaseapp.com",
+    projectId: "loginhotel-dfe70",
+    storageBucket: "loginhotel-dfe70.appspot.com",
+    messagingSenderId: "856965521034",
+    appId: "1:856965521034:web:86dd6bed854a39718a9773",
+    measurementId: "G-Y3PCWX07PY"
+  }
 };
 
 /*

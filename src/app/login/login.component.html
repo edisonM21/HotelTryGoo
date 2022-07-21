@@ -7,18 +7,21 @@
       <h1>Login</h1>
       <form action="" method="post">
         <div class="username">
-          <input type="text" required>
+          <input type="text" required [(ngModel)]="usuario.nombre">
           <label for="">Nombre de usuario</label>
         </div>
         <div class="username">
-          <input type="password" required>
+          <input type="password" required [(ngModel)]="usuario.password">
           <label for="">Contraseña</label>
         </div>
         <div class="recordar">¿Olvido su contraseña?</div>
-        <input type="submit" value="Ingresar">
+        <!-- <input type="submit" value="Ingresar" (click)="ingresar()"> -->
+        <input type="submit" value="Ingresar con google" (click)="ingresarConGoogle()" routerLink="/Home">
+        <input type="submit" value="Cerrar sesión" (click)="logout()">
         <div class="registrarse">
           Hacer Registro <a href="/Register">Registro</a>
-        </div>
+        </div>  
+        
       </form>
     </div> 
   </section>

@@ -15,12 +15,73 @@
     right: 10px;
     top: 1.5%;
 }
+#singUp1{
+    position: fixed;
+    left: 977px;
+    top: 1.5%;
+}
 #singUpo{
     position: fixed;
     left: 1100px;
     top: 7%;
 }
-.buscar{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .buscar{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +122,4 @@
     .buscar:hover > .buscar_texto{
         width: 300px;
     }
-}
+} */

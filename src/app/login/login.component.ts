@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Auth } from '@firebase/auth';
+import { ServicesAuthService } from '../services-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  
+
+  usuario = {
+    nombre:'',
+    password:''
+  }
+
+  constructor(private authService: ServicesAuthService) { }
+
+  ingresar(){
+    const {nombre, password}= this.usuario;
+    this.authService.login(nombre,password).then(res=>{
+      console.log("se registro", res);
+    })
+  }
+  ingresarConGoogle(){
+    console.log(this.usuario)
+    const {nombre, password}= this.usuario;
+    this.authService.loginGoogle(nombre,password).then(res=>{
+      console.log("se registro", res);
+    })
+  }
+
+
+  logout(){
+    this.authService.logout();
+  }
 
   ngOnInit(): void {
   }

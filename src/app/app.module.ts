@@ -7,13 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FormularioReservasComponent } from './formulario-reservas/formulario-reservas.component';
-//import { ReservasComponent } from './reservas/reservas.component';
 import { InformacionComponent } from './informacion/informacion.component';
-// import { HabitacionesService } from './habitaciones/habitaciones.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HabitacionesComponent } from './habitaciones/habitaciones.component';
-// import { ServicioPruebaService } from './servicio-prueba.service';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,9 @@ import { HabitacionesComponent } from './habitaciones/habitaciones.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
 
   ],
   providers: [],

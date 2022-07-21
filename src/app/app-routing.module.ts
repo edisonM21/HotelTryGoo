@@ -9,7 +9,7 @@ import { HabitacionesComponent } from './habitaciones/habitaciones.component';
 const routes: Routes = [
   {
     path:'',
-    component:LoginComponent,
+    component:HomeComponent,
     pathMatch:'full'
   },
   {

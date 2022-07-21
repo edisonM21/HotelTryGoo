@@ -1,9 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark menu fixed-top " id="menu">
+<nav class="navbar navbar-expand-lg navbar-dark menu fixed-top bg-dark" id="menu">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/Home">TryGo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
@@ -12,17 +13,26 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/habitaciones">Habitaciones</a>
           </li>
-
         </ul>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown" id="singUp">
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-user"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="singUpo" >
-                <li><a class="dropdown-item"  href="#">Login</a></li>
-                <li><a class="dropdown-item" href="#" routerLink="/Register">Registro</a></li>
-                <li><a class="dropdown-item" href="#" routerLink="/Login">Cerrar Sesion</a></li>
+                <li><a class="dropdown-item"  href="#" (click)="ingresarConGoogle()" routerLink="/Home">Login</a></li>
+                <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown" id="singUp1">
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="userLogged|async as user">
+                <img style="border-radius: 100%; width: 10%;" *ngIf="user.photoURL" src="{{user.photoURL}}" alt="" id="nombre">
+                  {{user.email}} 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="singUpo" >
+                <li><a class="dropdown-item"  href="#" >Login</a></li>
+                <li><a class="dropdown-item" href="#" (click)="logout()" routerLink="/Home">Cerrar Sesion</a></li>
               </ul>
             </li>
         </ul>
